@@ -65,6 +65,15 @@
                 </svg>
                 Manajemen Kategori
             </a>
+            <a href="{{ route('admin.partners.index') }}"
+                class="flex items-center gap-3 px-4 py-3 {{ request()->routeIs('admin.partners.*') ? 'bg-indigo-800 text-white' : 'hover:bg-indigo-800' }} rounded-xl font-bold transition">
+                <svg class="w-5 h-5 {{ request()->routeIs('admin.partners.*') ? 'text-indigo-300' : 'text-indigo-400' }}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 4.354a4 4 0 110 8.646 4 4 0 010-8.646M9 9H3v10a6 6 0 006 6h12a6 6 0 006-6V9h-6a4 4 0 00-4-4H9z">
+                    </path>
+                </svg>
+                Manajemen Partner
+            </a>
         </nav>
 
         <div class="pt-6 border-t border-indigo-800">
