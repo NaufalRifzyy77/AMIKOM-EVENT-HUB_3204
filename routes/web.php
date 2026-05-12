@@ -20,7 +20,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
     Route::resource('events', AdminEventController::class);
     Route::get('/transactions', [TransactionController::class, 'index'])->name('transactions.index');
-    Route::get('/categories', [CategoryController::class, 'index'])->name('categories.index');
+    Route::resource('categories', CategoryController::class);
     Route::resource('partners', PartnerController::class);
 });
 
