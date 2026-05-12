@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\EventController as AdminEventController;
 use App\Http\Controllers\Admin\TransactionController;
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\PartnerController;
 
 // User Area Routes
 Route::get('/', [HomeController::class, 'index'])->name('home');
@@ -20,5 +21,6 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::resource('events', AdminEventController::class);
     Route::get('/transactions', [TransactionController::class, 'index'])->name('transactions.index');
     Route::get('/categories', [CategoryController::class, 'index'])->name('categories.index');
+    Route::resource('partners', PartnerController::class);
 });
 
