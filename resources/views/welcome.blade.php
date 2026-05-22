@@ -108,5 +108,25 @@
             @endforeach
         </div>
     </section>
+
+    <!-- Partners Section -->
+    <section class="max-w-7xl mx-auto px-6 py-20">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-extrabold mb-2">Partner Kami</h2>
+            <p class="text-slate-500 font-medium">Dipercaya oleh berbagai organisasi dan perusahaan terkemuka</p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center justify-center">
+            @forelse($partners as $partner)
+            <div class="flex items-center justify-center p-6 bg-white rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition">
+                <img src="{{ $partner->logo_url }}" alt="{{ $partner->name }}" class="max-h-16 object-contain" title="{{ $partner->name }}">
+            </div>
+            @empty
+            <div class="col-span-full text-center text-gray-500 py-8">
+                <p>Belum ada partner terdaftar</p>
+            </div>
+            @endforelse
+        </div>
+    </section>
 @endsection
 
